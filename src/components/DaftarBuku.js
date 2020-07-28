@@ -24,7 +24,6 @@ export default class DaftarBuku extends React.Component {
     }
 
     render() {
-        console.log("kkkkk", this.state.books);
         return (
             <CardBuku buku={this.state.books} key={this.state.books.id} refresh={(data) => this.refreshData(data)} />
         )

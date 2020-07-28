@@ -1,40 +1,9 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-// import API from '../axios/API'
-
-// function CardBuku({ buku, refresh }) {
-
-//     async function deleteBuku() {
-//         await API.delete('blog/' + buku.id)
-
-//         return refresh()
-//     }
-//     return (
-//         <div className="col.md-3 card" style={{ margin: 5 }}>
-//             <h3>{buku.judul}</h3>
-//             <small>{buku.pengarang}</small>
-//             <p>{buku.penerbit}</p>
-//             <p>{buku.tahun}</p>
-//             <hr />
-//             <Link to={"/edit/" + buku.id}>
-//                 <i className="fa fa-pencil-square-o" aria-hidden="true"></i>
-//             </Link>
-
-//             <i className="fa fa-trash" aria-hidden="true" onClick={deleteBuku}></i>
-//             <br />
-//         </div>
-//     )
-// }
-
-// export default CardBuku
-
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import API from '../axios/API'
 
 export default class CardBuku extends Component {
     constructor(props) {
-        console.log(props);
         super(props)
         this.state = {
             data: this.props.buku,
@@ -54,7 +23,6 @@ export default class CardBuku extends Component {
     }
 
     render() {
-        console.log("mmmmm", this.props.buku);
         return (
             <div style={{ width: '50%', margin: '0 auto ' }}>
                 <table className="table">

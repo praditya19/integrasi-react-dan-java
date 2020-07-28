@@ -38,11 +38,9 @@ export default class EditBuku extends Component {
 
     render() {
         const { judul, pengarang, penerbit, tahun } = this.state
-        console.log("judul:" + judul);
         return (
             <div className="container">
                 <h2>ini adalah edit</h2>
-
                 <table>
                     <tbody>
                         <tr>
